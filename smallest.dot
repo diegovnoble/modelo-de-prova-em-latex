@@ -1,0 +1,40 @@
+digraph G {
+    node[margin=0 shape=circle fontsize=18]
+    edge[fontsize=18]
+    s[style=filled]
+	z[style=filled]
+    rankdir="LR";
+    ratio = "auto";
+	{rank=source; s;}
+	s->a [label=1];
+	s->b [label=2];
+	{rank=same; a;b;}
+	a->d [label=7];
+	b->d [label=2];
+	b->e [label=1]
+	b->c [label=20];
+	{rank=same; c;d;e}
+	c->f [label=1];
+	d->g [label=3];
+	d->a [label=1];
+	d->h [label=2];
+	e->i [label=9];
+	{rank=same; f;g;h;i}
+	f->j [label=2]
+	g->l [label=5];
+	h->m [label=3];
+	i->m [label=12];
+	{rank=same; j;l;m}
+	j->n [label=3];
+	m->c [label=1];
+	m->n [label=30];
+	l->o [label=8]
+	{rank=same; n;o;}
+	n->q [label=5];
+	o->p [label=10];
+	o->q [label=12];
+	{rank=same; p;q;}
+	p->z [label=9];
+	q->z [label=3];
+	{rank=same; z;}
+}
