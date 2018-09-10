@@ -32,22 +32,6 @@
 % Algoritms and Code
 \usepackage[vlined,portuguese,linesnumbered,tworuled]{algorithm2e}
 \usepackage[outputdir={./build}]{minted}
-\setminted{
-    fontsize=\small,
-    fontfamily=tt,
-    fontsize=\small,
-    style=bw,
-    frame=leftline,
-    framerule=0.5pt,
-    framesep=2mm,
-    tabsize=4,
-    samepage=true,
-    style=bw,
-    highlightcolor=lightgray,
-    autogobble,
-    linenos,
-    breaklines,
-}
 
 % Exam package
 \usepackage{xsim}
@@ -81,6 +65,22 @@
 \fancyfoot[C]{Página \thepage\ de \pageref{LastPage}}
 \renewcommand{\headrulewidth}{0pt} 
 \pagestyle{fancy}
+
+\setminted{
+    fontsize=\small,
+    fontfamily=tt,
+    style=bw,
+    frame=leftline,
+    framerule=0.5pt,
+    framesep=2mm,
+    tabsize=4,
+    samepage=true,
+    style=bw,
+    highlightcolor=mylightgray,
+    autogobble,
+    linenos,
+    breaklines,
+}
 
 % The document
 \begin{document}
