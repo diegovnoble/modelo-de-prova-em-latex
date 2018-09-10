@@ -32,19 +32,40 @@
 % Algoritms and Code
 \usepackage[vlined,portuguese,linesnumbered,tworuled]{algorithm2e}
 \usepackage[outputdir={./build}]{minted}
+\setminted{
+    fontsize=\small,
+    fontfamily=tt,
+    fontsize=\small,
+    style=bw,
+    frame=leftline,
+    framerule=0.5pt,
+    framesep=2mm,
+    tabsize=4,
+    samepage=true,
+    style=bw,
+    highlightcolor=lightgray,
+    autogobble,
+    linenos,
+    breaklines,
+}
 
 % Exam package
 \usepackage{xsim}
 \DeclareExerciseType{question}{
-exercise-env      = question ,
-solution-env      = answer ,
-exercise-name     = questão ,
-solution-name     = resposta ,
-exercise-template = default ,
-solution-template = default
+    exercise-env      = question ,
+    solution-env      = answer ,
+    exercise-name     = questão ,
+    solution-name     = resposta ,
+    exercise-template = default ,
+    solution-template = default
 }
+
 \DeclareExerciseTranslations{points}{
-Brazilian= pontos
+    Brazilian= pontos
+}
+
+\xsimsetup{
+    answer/print = true
 }
 
 % Images and fancy stuff
