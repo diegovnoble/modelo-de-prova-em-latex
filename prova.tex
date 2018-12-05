@@ -51,8 +51,10 @@
 }
 
 \xsimsetup{
+    question/print = true,
     answer/print = true
 }
+\DeclareExerciseTranslation{Brazilian}{reached}{Alcançado}
 
 % Images and fancy stuff
 \usepackage{graphicx}
@@ -108,7 +110,7 @@
 \end{tcolorbox}
 
 % Questions
-\begin{question}[points=2.0, subtitle=Algoritmos Gulosos]
+\begin{question}[points=2.0, subtitle={Questão do Enade}, topics={Algoritmos Gulosos}]
     Você precisa definir a posição de bases de celular para cobrir \emph{todas} as casas
     que ficam ao longo de uma estrada. A estrada pode ser interpretada como um segmento
     de reta com pontas leste e oeste. Cada base de celular cobre 4 quilômetros para cada lado.
@@ -116,7 +118,7 @@
     o menor número de bases possível.
 \end{question}
 
-\begin{question}[points=3.0,subtitle=Divisão-e-conquista]
+\begin{question}[points=3.0,topics={Divisão-e-conquista}]
 	Sejam $a \geq 1$ e $b > 1$ constantes, $f(n)$ e $T(n)$ funções definidas
 	sobre inteiros não-negativos, temos que:
 	\begin{table}[h!]
@@ -143,7 +145,7 @@
 	\end{multicols}
 \end{question}
 
-\begin{question}[points=2.5, subtitle=Algoritmos Gulosos]
+\begin{question}[points=2.5, topics={Algoritmos Gulosos}]
 	Considere o problema de encontrar o troco para $n$ centavos usando o menor
 	número possível de moedas. Assuma que cada moeda tem um respectivo valor inteiro.
 	\begin{enumerate}[label=(\alph*)]
@@ -232,7 +234,7 @@
 
 \begin{question}
     Algumas afirmações abaixo são verdadeiras e outras são falsas:
-    \begin{enumerate}[label=(\alph*)]
+    \begin{enumerate}
         \item Morbi ac imperdiet nisi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec lobortis magna nibh, a consequat libero convallis sit amet.
         \item Phasellus tellus libero, gravida tempor fringilla et, viverra ut sem. Nunc et nulla neque. 
         \item Lisque id eros pellentesque, fringilla neque at, ultricies lorem.
@@ -264,6 +266,10 @@
     \end{table}
 \end{answer}
 
+%\vspace{\stretch{1}}
+\centering
+\vfill
+\gradingtable[template=default*,type=question]
 \end{document}
 
 % \newtcblisting{mycpp}[1]{%
