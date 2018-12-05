@@ -1,5 +1,5 @@
 % TODO:
-% 1. migrate to tcblisting (prototype at the end)
+% 1. 
 \documentclass[12pt,a4paper]{article}
 
 % Input and language
@@ -45,16 +45,12 @@
     exercise-template = default ,
     solution-template = default
 }
-
-\DeclareExerciseTranslations{points}{
-    Brazilian= pontos
-}
-
+\DeclareExerciseTranslation{Brazilian}{points}{pontos}
+\DeclareExerciseTranslation{Brazilian}{reached}{Atingido}
 \xsimsetup{
     question/print = true,
     answer/print = true
 }
-\DeclareExerciseTranslation{Brazilian}{reached}{Alcançado}
 
 % Images and fancy stuff
 \usepackage{graphicx}
@@ -71,7 +67,7 @@
 \pagestyle{fancy}
 
 \setminted{
-    fontsize=\small,
+    %fontsize=\small,
     fontfamily=tt,
     style=bw,
     frame=leftline,
@@ -92,22 +88,26 @@
 % Heading
 \section*{\large \centerline{\underline{Prova \color{red}{**}}}}
 \section*{\normalsize \centerline{\color{red}{CODCRED - DISCIPLINA - TURMA - SEMESTRE - Prof. Diego Noble}}}
-\bigskip
+\medskip
 \begin{tabular}{lr}
 	\makebox[0.8\textwidth]{Nome:\enspace\hrulefill} & \makebox[0.15\textwidth]{Nota:\enspace\hrulefill} \\
 \end{tabular}
 
 % Instructions
 \begin{tcolorbox}[center title,title=\textbf{\large Instruções}, coltitle=black, colbacktitle=mydarkgray, colframe=black, colback=mylightgray]
-	\begin{itemize}
+    \small
+	\begin{itemize}[leftmargin=1mm]        
 	    \item A prova é individual e sem consulta a qualquer material.
 	    \item Somente respostas escritas à caneta serão reavaliadas.
-	    \item É proibido fazer perguntas de interpretação da prova após a leitura da mesma pelo professor.
+	    \item Após a leitura da prova pelo professor, ficam proibidas perguntas de interpretação.
 	    \item É proibido o empréstimo de material durante a prova.
 	    \item Só é permitida a entrega da prova transcorridos 20 minutos do seu início.
+        \item O uso de aparelhos celulares/\textit{smarthphones}/\textit{smartwatches} é proibido.
+        \item Coloque o seu nome de forma legível em todas as folhas/rascunhos da prova.
 	    \item A prova tem valor total de \printtotalpoints.
 	\end{itemize}
 \end{tcolorbox}
+\normalsize
 
 % Questions
 \begin{question}[points=2.0, subtitle={Questão do Enade}, topics={Algoritmos Gulosos}]
@@ -271,19 +271,3 @@
 \vfill
 \gradingtable[template=default*,type=question]
 \end{document}
-
-% \newtcblisting{mycpp}[1]{%
-%     listing engine=minted,
-%     minted language=c++,
-%     minted style=bw,
-    % %fonttitle=\large\univrscondensed,
-    % title=#1,
-    % center title,
-    % %colback=pdcolor4,
-    % colframe=black,
-    % %coltext=pdcolor1,
-    % listing only,
-    % left=5mm,
-    % drop fuzzy shadow, % tikz only
-    % enhanced % tikz only
-% }
